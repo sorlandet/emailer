@@ -1,0 +1,28 @@
+#!/bin/bash
+exec 2>&1
+
+PROJECTNAME=emailer
+USER=ec2-user
+GROUP=ec2-user
+
+SOURCEPATH=/opt/www/$PROJECTNAME
+
+CELERY=/home/$USER/.virtualenvs/$PROJECTNAME/bin/celery
+LOGPATH=/var/log/$PROJECTNAME
+
+PID=/var/run/$PROJECTNAME/$PROJECTNAME.pid
+
+
+if [ -f $PID ]
+    then rm $PID
+fi
+
+exec $CELERY worker \
+    --app=$PROJECTNAME \
+    --uid=$USER \
+    --gid=$GROUP \
+    --pidfile=$PID \
+    --loglevel=ERROR \
+    --workdir=$SOURCEPATH \
+    --logfile=$LOGPATH/error.log \
+    --quiet

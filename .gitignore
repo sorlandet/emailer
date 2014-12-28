@@ -12,18 +12,9 @@
 
 *.log
 
-bower_components/
-**/node_modules/
 collected_static/
 db/
 media/
 reports/
 
 secret.txt
-basename.exe.stackdump
-
-
-!src/**/media/
-src/**/node_modules/
-
-src/django-*/
