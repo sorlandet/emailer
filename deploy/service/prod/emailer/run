@@ -25,4 +25,5 @@ exec $CELERY worker \
     --loglevel=ERROR \
     --workdir=$SOURCEPATH \
     --logfile=$LOGPATH/error.log \
+    --concurrency=2 \
     --quiet
