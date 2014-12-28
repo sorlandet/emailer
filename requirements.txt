@@ -1,0 +1,9 @@
+Django==1.7.1
+amqp==1.4.6
+anyjson==0.3.3
+billiard==3.3.0.19
+boto==2.34.0
+celery==3.1.17
+django-ses==0.7.0
+kombu==3.0.24
+pytz==2014.10
