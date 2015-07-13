@@ -1,9 +1,9 @@
-Django==1.7.1
+Django==1.7.9
 amqp==1.4.6
 anyjson==0.3.3
 billiard==3.3.0.19
 boto==2.34.0
-celery==3.1.17
+celery==3.1.18
 django-celery==3.1.16
 django-celery-email==1.0.4
 django-ses==0.7.0
